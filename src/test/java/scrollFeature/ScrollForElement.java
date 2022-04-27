@@ -13,7 +13,6 @@ import utilities.MyLogger;
 
 public class ScrollForElement extends HudlBaseDriver {
 	private WebDriver driver;
-	private WebDriverWait wait;
 	MyLogger oLogger = new MyLogger();
 
 	@FindBy(xpath = "//button[@id='logInWithOrganization']")
@@ -23,7 +22,6 @@ public class ScrollForElement extends HudlBaseDriver {
 	public ScrollForElement(WebDriver driver, WebDriverWait wait) {
 
 		this.driver = driver;
-		this.wait = wait;
 		PageFactory.initElements(driver, this);
 
 	}
@@ -34,7 +32,7 @@ public class ScrollForElement extends HudlBaseDriver {
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(By.xpath("(//button[@id='logInWithOrganization'])"));
 		je.executeScript("arguments[0].scrollIntoView(true);", element);
-		oLogger.info("Scrolled for save and update button");
+		oLogger.info("Scrolled for log in with organization button");
 		Thread.sleep(1000);
 
 	}
