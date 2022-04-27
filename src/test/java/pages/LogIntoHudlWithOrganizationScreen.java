@@ -11,16 +11,14 @@ import baseClass.HudlBaseDriver;
 import utilities.MyLogger;
 
 public class LogIntoHudlWithOrganizationScreen extends HudlBaseDriver {
-	private WebDriver driver;
 	private WebDriverWait wait;
 	MyLogger oLogger = new MyLogger();
 
 	@FindBy(xpath = "//h2[contains(text(),'Log into Hudl')]")
 	private WebElement verifyLogIntoHudleWithOrgScreen;
 
-	// Constructor to initialize webdriver, webdriverwait and page objects
+	// Constructor to initialize webdriverwait and page objects
 	public LogIntoHudlWithOrganizationScreen(WebDriver driver, WebDriverWait wait) {
-		this.driver = driver;
 		this.wait = wait;
 		PageFactory.initElements(driver, this);
 

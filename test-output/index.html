@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\dj051670\AppData\Local\Temp\testng-eclipse--848002291\testng-customsuite.xml</span>
+                    <span>C:\Users\dj051670\AppData\Local\Temp\testng-eclipse--1519223165\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.HudlSmokeTests" hash-for-method="loginToHudlTest">loginToHudlTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.HudlLoginTests" hash-for-method="loginToHudlTest">loginToHudlTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,7 +120,7 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.HudlSmokeTests</span>
+              <span class="class-name">tests.HudlLoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dj051670\AppData\Local\Temp\testng-eclipse--848002291\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\dj051670\AppData\Local\Temp\testng-eclipse--1519223165\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +144,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.HudlSmokeTests&quot;&gt;
+      &lt;class name=&quot;tests.HudlLoginTests&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;loginToHudlTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- tests.HudlSmokeTests --&gt;
+      &lt;/class&gt; &lt;!-- tests.HudlLoginTests --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -191,8 +191,8 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginToHudlTest')
-data.setCell(0, 2, 'tests.HudlSmokeTests')
-data.setCell(0, 3, 12193);
+data.setCell(0, 2, 'tests.HudlLoginTests')
+data.setCell(0, 3, 12399);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -212,21 +212,23 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.HudlSmokeTests</span>
+              <span class="ignored-class-name">tests.HudlLoginTests</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginToHudlWithInvalidPasswordTest</span>
+                <br/>
+                <span class="ignored-method-name">loginToHudlWithBlankEmailBlankPasswordTest</span>
+                <br/>
+                <span class="ignored-method-name">logOutOfHudlTest</span>
+                <br/>
                 <span class="ignored-method-name">verifyLogIntoHudlWithOrganziationFunctionalityTest</span>
                 <br/>
                 <span class="ignored-method-name">loginToHudlWithInvalidEmailTest</span>
                 <br/>
-                <span class="ignored-method-name">loginToHudlWithInvalidPasswordTest</span>
-                <br/>
                 <span class="ignored-method-name">verifyNeedHelpButtonFunctionalityTest</span>
-                <br/>
-                <span class="ignored-method-name">loginToHudlWithBlankEmailBlankPasswordTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -238,18 +240,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.HudlSmokeTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.HudlLoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">loginToHudlTest</span>
-                <span class="method-start">6102 ms</span>
+                <span class="method-start">5683 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">myOrdertearDown</span>
-                <span class="method-start">18326 ms</span>
+                <span class="method-start">18114 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.MyLogger;
 
 public class LoginHelpScreen {
-	private WebDriver driver;
 	private WebDriverWait wait;
 	MyLogger oLogger = new MyLogger();
 
@@ -26,9 +25,8 @@ public class LoginHelpScreen {
 	@FindBy(xpath = "//input[@id='forgot-email']")
 	private WebElement emailInputVerifyLoginHelpScreen;
 
-	// Constructor to initialize webdriver, webdriverwait and page objects
+	// Constructor to initialize webdriverwait and page objects
 	public LoginHelpScreen(WebDriver driver, WebDriverWait wait) {
-		this.driver = driver;
 		this.wait = wait;
 		PageFactory.initElements(driver, this);
 
@@ -54,6 +52,7 @@ public class LoginHelpScreen {
 		sendPasswordResetButton.click();
 		oLogger.info("Send password reset button has been clicked");
 		wait.until(ExpectedConditions.visibilityOf(verifyCheckYourEmailMessage));
+		oLogger.info("Check your email message is displayed");
 		Thread.sleep(1000);
 	}
 

@@ -1,7 +1,6 @@
 package tests;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import org.testng.annotations.Test;
 import baseClass.HudlBaseDriver;
 import pages.HomeScreen;
@@ -11,7 +10,7 @@ import pages.LoginHelpScreen;
 import pages.LoginScreen;
 import scrollFeature.ScrollForElement;
 
-public class HudlSmokeTests extends HudlBaseDriver {
+public class HudlLoginTests extends HudlBaseDriver {
 	String email = "devinspencerjames@gmail.com";
 	String invalidEmail = "devonspencerjames@gmail.com";
 
@@ -107,14 +106,37 @@ public class HudlSmokeTests extends HudlBaseDriver {
 		// *************PAGE INSTANTIATION*************
 		InitialScreen initialScreen = new InitialScreen(driver, wait);
 		LoginScreen loginScreen = new LoginScreen(driver, wait);
-		LogIntoHudlWithOrganizationScreen logIntoHudlWithOrganizationScreen = new LogIntoHudlWithOrganizationScreen(driver, wait);
-        ScrollForElement scrollForElement = new ScrollForElement(driver, wait);
+		LogIntoHudlWithOrganizationScreen logIntoHudlWithOrganizationScreen = new LogIntoHudlWithOrganizationScreen(
+				driver, wait);
+		ScrollForElement scrollForElement = new ScrollForElement(driver, wait);
 		// *************PAGE METHODS******************
 		initialScreen.clickLoginButton();
 		loginScreen.verifyLoginScreen();
 		scrollForElement.scrollForlogInWithOrganizationButton();
 		loginScreen.clickLogInWithOrganizationButton();
 		logIntoHudlWithOrganizationScreen.verifyLogIntoHudlWithOrgScreen();
+
+	}
+
+	@Test(testName = "Logout of Hudl")
+	public void logOutOfHudlTest() throws InterruptedException, IOException {
+
+		// *************PAGE INSTANTIATION*************
+		InitialScreen initialScreen = new InitialScreen(driver, wait);
+		LoginScreen loginScreen = new LoginScreen(driver, wait);
+		HomeScreen homeScreen = new HomeScreen(driver, wait);
+
+		// *************PAGE METHODS******************
+		initialScreen.clickLoginButton();
+		loginScreen.verifyLoginScreen();
+		loginScreen.enterEmailAddress(email);
+		loginScreen.enterPassword();
+		loginScreen.clickLoginButton();
+		homeScreen.verifyHomeScreen();
+		homeScreen.clickUserMenu();
+		homeScreen.clickLogoutButton();
+		initialScreen.verifyHudlLogo();
+		
 
 	}
 }

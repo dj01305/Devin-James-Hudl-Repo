@@ -15,7 +15,6 @@ import org.apache.commons.codec.binary.Base64;
 import utilities.MyLogger;
 
 public class LoginScreen {
-	private WebDriver driver;
 	private WebDriverWait wait;
 	MyLogger oLogger = new MyLogger();
 
@@ -41,9 +40,8 @@ public class LoginScreen {
 	private WebElement weDidntRecognizeEmailAndOrPasswordMessage;
 	
 
-	// Constructor to initialize webdriver, webdriverwait and page objects
+	// Constructor to initialize webdriverwait and page objects
 	public LoginScreen(WebDriver driver, WebDriverWait wait) {
-		this.driver = driver;
 		this.wait = wait;
 		PageFactory.initElements(driver, this);
 
@@ -115,9 +113,9 @@ public class LoginScreen {
 	public void verifyWeDidntRecognizeEmailOrPasswordMessage() {
 		try {
 			wait.until(ExpectedConditions.visibilityOf(weDidntRecognizeEmailAndOrPasswordMessage));
-			oLogger.info("Invalid email and or password message has been displayed");
+			oLogger.info("We didn't recognize that email and/or password message has been displayed");
 		} catch (Exception e) {
-			oLogger.info("Invalid email and or password message was not displayed");
+			oLogger.info("We didn't recognize that email and/or password message was not displayed");
 		}
 	}
 	

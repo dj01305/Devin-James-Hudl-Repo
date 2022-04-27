@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
+<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12231" started-at="2022-04-26T17:49:42Z" finished-at="2022-04-26T17:49:54Z">
+  <suite name="Default suite" duration-ms="12431" started-at="2022-04-27T14:59:03Z" finished-at="2022-04-27T14:59:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12231" started-at="2022-04-26T17:49:42Z" finished-at="2022-04-26T17:49:54Z">
-      <class name="tests.HudlSmokeTests">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.HudlSmokeTests@148080bb]" name="setup" is-config="true" duration-ms="6067" started-at="2022-04-26T17:49:36Z" finished-at="2022-04-26T17:49:42Z">
+    <test name="Default test" duration-ms="12431" started-at="2022-04-27T14:59:03Z" finished-at="2022-04-27T14:59:15Z">
+      <class name="tests.HudlLoginTests">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.HudlLoginTests@148080bb]" name="setup" is-config="true" duration-ms="5654" started-at="2022-04-27T14:58:57Z" finished-at="2022-04-27T14:59:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginToHudlTest()[pri:0, instance:tests.HudlSmokeTests@148080bb]" name="loginToHudlTest" duration-ms="12193" started-at="2022-04-26T17:49:42Z" finished-at="2022-04-26T17:49:54Z">
+        <test-method status="PASS" signature="loginToHudlTest()[pri:0, instance:tests.HudlLoginTests@148080bb]" name="loginToHudlTest" duration-ms="12399" started-at="2022-04-27T14:59:03Z" finished-at="2022-04-27T14:59:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToHudlTest -->
-        <test-method status="PASS" signature="myOrdertearDown()[pri:0, instance:tests.HudlSmokeTests@148080bb]" name="myOrdertearDown" is-config="true" duration-ms="752" started-at="2022-04-26T17:49:54Z" finished-at="2022-04-26T17:49:55Z">
+        <test-method status="PASS" signature="myOrdertearDown()[pri:0, instance:tests.HudlLoginTests@148080bb]" name="myOrdertearDown" is-config="true" duration-ms="726" started-at="2022-04-27T14:59:15Z" finished-at="2022-04-27T14:59:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- myOrdertearDown -->
-      </class> <!-- tests.HudlSmokeTests -->
+      </class> <!-- tests.HudlLoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

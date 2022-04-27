@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.MyLogger;
 
 public class InitialScreen {
-	private WebDriver driver;
 	private WebDriverWait wait;
 	MyLogger oLogger = new MyLogger();
 
@@ -19,9 +18,8 @@ public class InitialScreen {
 	@FindBy(xpath = "//a[@data-qa-id='login']")
 	private WebElement loginButton;
 
-	// Constructor to initialize webdriver, webdriverwait and page objects
+	// Constructor to initialize webdriverwait and page objects
 	public InitialScreen(WebDriver driver, WebDriverWait wait) {
-		this.driver = driver;
 		this.wait = wait;
 		PageFactory.initElements(driver, this);
 
@@ -37,6 +35,7 @@ public class InitialScreen {
 	
 	// Method to click on the Login button
 	public void clickLoginButton() throws InterruptedException {
+		wait.until(ExpectedConditions.visibilityOf(loginButton));
 		loginButton.click();
 		oLogger.info("Login button has been clicked");
 		Thread.sleep(2000);
