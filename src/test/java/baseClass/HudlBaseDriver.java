@@ -47,7 +47,7 @@ public class HudlBaseDriver {
 	}
 
 	@AfterSuite
-	public void myOrdertearDown() throws InterruptedException {
+	public void testTearDown() throws InterruptedException {
 		// Close Browser & driver sessions
 		driver.quit();
 		oLogger.info("driver quit");

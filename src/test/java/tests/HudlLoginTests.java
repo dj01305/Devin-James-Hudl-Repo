@@ -115,6 +115,10 @@ public class HudlLoginTests extends HudlBaseDriver {
 		scrollForElement.scrollForlogInWithOrganizationButton();
 		loginScreen.clickLogInWithOrganizationButton();
 		logIntoHudlWithOrganizationScreen.verifyLogIntoHudlWithOrgScreen();
+		logIntoHudlWithOrganizationScreen.enterEmailAddress(email);
+		logIntoHudlWithOrganizationScreen.clickLoginButton();
+		loginScreen.verifyUserCantLogInWithOrgErrorMessage();
+		
 
 	}
 

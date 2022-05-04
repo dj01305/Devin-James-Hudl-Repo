@@ -30,7 +30,7 @@ public class ScrollForElement extends HudlBaseDriver {
 	public void scrollForlogInWithOrganizationButton() throws InterruptedException {
 
 		JavascriptExecutor je = (JavascriptExecutor) driver;
-		WebElement element = driver.findElement(By.xpath("(//button[@id='logInWithOrganization'])"));
+		WebElement element = driver.findElement(By.xpath("//button[@data-qa-id='log-in-with-organization-btn']"));
 		je.executeScript("arguments[0].scrollIntoView(true);", element);
 		oLogger.info("Scrolled for log in with organization button");
 		Thread.sleep(1000);

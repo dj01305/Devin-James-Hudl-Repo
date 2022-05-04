@@ -13,16 +13,16 @@ public class LoginHelpScreen {
 	private WebDriverWait wait;
 	MyLogger oLogger = new MyLogger();
 
-	@FindBy(xpath = "//h1[contains(text(),'Login Help')]")
+	@FindBy(xpath = "//h2[@data-qa-id='login-help-headline']")
 	private WebElement verifyLoginHelpScreen;
 	
-	@FindBy(xpath = "//button[@id='resetBtn']")
+	@FindBy(xpath = "//button[@data-qa-id='password-reset-submit-btn']")
 	private WebElement sendPasswordResetButton;
 	
-	@FindBy(xpath = "//h4[contains(text(),'Check Your Email')]")
+	@FindBy(xpath = "//h3[contains(text(),'Check Your Email')]")
 	private WebElement verifyCheckYourEmailMessage;
 	
-	@FindBy(xpath = "//input[@id='forgot-email']")
+	@FindBy(xpath = "//input[@data-qa-id='password-reset-input']")
 	private WebElement emailInputVerifyLoginHelpScreen;
 
 	// Constructor to initialize webdriverwait and page objects

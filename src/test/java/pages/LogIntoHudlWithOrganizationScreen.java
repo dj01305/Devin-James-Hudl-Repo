@@ -16,6 +16,12 @@ public class LogIntoHudlWithOrganizationScreen extends HudlBaseDriver {
 
 	@FindBy(xpath = "//h2[contains(text(),'Log into Hudl')]")
 	private WebElement verifyLogIntoHudleWithOrgScreen;
+	
+	@FindBy(xpath = "//input[@id='uniId_1']")
+	private WebElement emailInput;
+	
+	@FindBy(xpath = "//button[@data-qa-id='log-in-with-sso']")
+	private WebElement loginButton;
 
 	// Constructor to initialize webdriverwait and page objects
 	public LogIntoHudlWithOrganizationScreen(WebDriver driver, WebDriverWait wait) {
@@ -28,6 +34,20 @@ public class LogIntoHudlWithOrganizationScreen extends HudlBaseDriver {
 	public void verifyLogIntoHudlWithOrgScreen() throws InterruptedException {
 		wait.until(ExpectedConditions.visibilityOf(verifyLogIntoHudleWithOrgScreen));
 		oLogger.info("Log into Hudl with org screen is displayed");
+		Thread.sleep(1000);
+	}
+	
+	// Method to enter email address
+	public void enterEmailAddress(String email) throws InterruptedException {
+		emailInput.sendKeys(email);
+		oLogger.info("Email has been entered");
+		Thread.sleep(1000);
+	}
+	
+	// Method to click on the login button
+	public void clickLoginButton() throws InterruptedException {
+		loginButton.click();
+		oLogger.info("Login button has been clicked");
 		Thread.sleep(1000);
 	}
 

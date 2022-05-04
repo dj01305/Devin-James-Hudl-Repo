@@ -30,14 +30,17 @@ public class LoginScreen {
 	@FindBy(xpath = "//label[contains(text(),'Remember me')]")
 	private WebElement rememberMeCheckBox;
 
-	@FindBy(xpath = "//a[@id='forgot-password-link']")
+	@FindBy(xpath = "//a[@data-qa-id='need-help-link']")
 	private WebElement needHelpLink;
 
-	@FindBy(xpath = "//button[@id='logInWithOrganization']")
+	@FindBy(xpath = "//button[@data-qa-id='log-in-with-organization-btn']")
 	private WebElement logInWithOrganizationButton;
 
-	@FindBy(xpath = "//p[contains(text(),'recognize that email and/or password. ')]")
+	@FindBy(xpath = "//p[@data-qa-id='error-display']")
 	private WebElement weDidntRecognizeEmailAndOrPasswordMessage;
+	
+	@FindBy(xpath = "//p[@data-qa-id='error-display']")
+	private WebElement thisAccountCantLoginWithOrgMessage;
 	
 
 	// Constructor to initialize webdriverwait and page objects
@@ -131,6 +134,19 @@ public class LoginScreen {
 		logInWithOrganizationButton.click();
 		oLogger.info("Log in with organization button has been clicked");
 		Thread.sleep(1000);
+		
+	}
+	
+	// Method to verify that the user can't log in with an org error message
+	public void verifyUserCantLogInWithOrgErrorMessage() {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(thisAccountCantLoginWithOrgMessage));
+			oLogger.info("User can't log in with org message is displayed");
+			Thread.sleep(1000);
+		}catch(Exception e) {
+			oLogger.info("User can't log in with org message not displayed");
+		}
+		
 		
 	}
 
