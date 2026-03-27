@@ -1,6 +1,6 @@
 # Hudl Login Tests
 
-This project was built in April 2022 as a personal portfolio entry to demonstrate automated UI testing skills.
+This project was built as a personal portfolio entry to demonstrate automated UI testing skills.
 
 ## What it is
 
