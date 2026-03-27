@@ -10,7 +10,7 @@ If you want to see how my approach has evolved — toward full-stack development
 That project demonstrates full-stack development with React, Node.js, JWT authentication, Playwright E2E tests, Supertest API tests, and GitHub Actions CI — built with a hybrid QE + development mindset. It uses `async/await` throughout, no sleep calls, and tests that are designed to be portable and CI-ready from day one.
 
 
-## What it is
+## What Hudl Login Test is
 
 A Java + Selenium WebDriver test suite that automates login scenarios against the Hudl web application. It covers standard login flows and basic validation cases.
 
