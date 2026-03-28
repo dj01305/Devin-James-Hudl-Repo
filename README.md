@@ -2,7 +2,7 @@
 
 ## Context
 
-I have been writing test automation since 2014. This repo represents my first personal GitHub portfolio entry — written at a point in my career when my primary focus was pure QA automation in Java.
+I have been writing test automation since 2014. This repo represents my first personal GitHub portfolio entry, written at a point in my career when my primary focus was pure QA automation in Java.
 
 If you want to see how my approach has evolved — toward full-stack development, hybrid QE thinking, JavaScript-based tooling, and modern async patterns — take a look at my more recent project:
 
